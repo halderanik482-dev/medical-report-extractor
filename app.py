@@ -9,7 +9,7 @@ st.write("Upload ANY lab report. The AI will find the values, regardless of the 
 # Securely load the API key from Streamlit's secrets
 try:
     genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-1.5-flash-latest')
 except KeyError:
     st.error("API Key not found. Please add it to the Streamlit Secrets.")
     st.stop()
